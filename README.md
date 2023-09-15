@@ -15,5 +15,12 @@ TELA DE PRODUTOS:
 
 ![image](https://github.com/samuelbozio/layout-app1-flutter/assets/82827007/20d66ccc-42cd-44e8-b4c8-3a346a1118fd)
 
+TELA DO PRODUTO: 
+
+![image](https://github.com/samuelbozio/layout-app1-flutter/assets/82827007/0a3cd298-eb1c-41b9-9801-407098dec828)
+
+![image](https://github.com/samuelbozio/layout-app1-flutter/assets/82827007/4df0d68e-f3d2-4b86-8928-559612814e9a)
+
+
 
 
