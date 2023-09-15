@@ -21,6 +21,11 @@ TELA DO PRODUTO:
 
 ![image](https://github.com/samuelbozio/layout-app1-flutter/assets/82827007/4df0d68e-f3d2-4b86-8928-559612814e9a)
 
+CARRINHO DE COMPRAS
+
+![image](https://github.com/samuelbozio/layout-app1-flutter/assets/82827007/94281b7b-6745-415a-a919-58b24a2af00a)
+
+
 
 
 
