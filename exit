@@ -1,0 +1,29 @@
+[33mcommit 830b1edeb109989452f8ec0698185516a0a6713d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Samuel Bozio <samuel@rodosoft.com.br>
+Date:   Fri Sep 15 08:55:32 2023 -0300
+
+    add tela de detalhes do produto
+
+[33mcommit 6947d92c397bb4cdc507bf61cf9b6ea75cdc8f92[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Samuel Bozio <samuelbozio@hotmail.com>
+Date:   Fri Sep 15 08:54:54 2023 -0300
+
+    Update README.md
+
+[33mcommit 61d8c8e5d60979aef3678478df19f929eeb4c50f[m
+Author: Samuel Bozio <samuelbozio@hotmail.com>
+Date:   Thu Sep 14 15:06:27 2023 -0300
+
+    Update README.md
+
+[33mcommit a2d2faca16455ef34823c3ced8c1dc649245da9f[m
+Author: Samuel Bozio <samuelbozio@hotmail.com>
+Date:   Thu Sep 14 15:04:43 2023 -0300
+
+    Update README.md
+
+[33mcommit 7a883fca5047637671af357aa8a6836371d258d4[m
+Author: Samuel Bozio <samuel@rodosoft.com.br>
+Date:   Thu Sep 14 14:12:03 2023 -0300
+
+    layout 1 feito no flutter

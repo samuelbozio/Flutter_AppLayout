@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
@@ -12,8 +10,9 @@ class ProductPage extends StatelessWidget {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-              iconTheme: IconThemeData(color: Colors.black),
-              backgroundColor: Color.fromARGB(255, 233, 228, 228).withOpacity(0),
+              iconTheme: const IconThemeData(color: Colors.black),
+              backgroundColor:
+                  const Color.fromARGB(255, 233, 228, 228).withOpacity(0),
               elevation: 0.0,
               expandedHeight: 700,
               floating: false, //não tá flutuando.
@@ -35,33 +34,28 @@ class ProductPage extends StatelessWidget {
               ),
             ),
             Column(
-          
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                      child: Text(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
                     "By Sam",
                     style: TextStyle(fontWeight: FontWeight.w400),
-                  )),
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                      child: Text(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
                     "Details",
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-                  )),
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 8),
-                  child: Container(
-                    child: Text(
-                      "Uma breve descrição sobre o design, material \ne contexto de uso do produto",
-                      style: TextStyle(fontSize: 16),
-                    ),
+                  padding: EdgeInsets.only(top: 10, left: 8),
+                  child: Text(
+                    "Uma breve descrição sobre o design, material \ne contexto de uso do produto",
+                    style: TextStyle(fontSize: 16),
                   ),
                 )
               ],

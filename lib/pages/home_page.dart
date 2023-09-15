@@ -1,9 +1,6 @@
 
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:layouts_1/pages/product_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -169,7 +166,7 @@ Widget productCard(BuildContext context) {
           GestureDetector(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ProductPage()));
+                  MaterialPageRoute(builder: (context) => const ProductPage()));
             },
             child: const Center(
               child: Icon(

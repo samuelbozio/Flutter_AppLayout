@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:layouts_1/pages/login_page.dart';
-import 'package:layouts_1/pages/product_page.dart';
-import 'package:layouts_1/pages/sign_up_page.dart';
-import 'package:layouts_1/pages/home_page.dart';
+import 'package:layouts_1/pages/tabs_pages.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: DefaultTabController(length: 3, child: TabsPage()),
     );
   }
 }
