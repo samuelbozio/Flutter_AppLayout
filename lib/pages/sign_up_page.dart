@@ -7,8 +7,8 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: const IconThemeData(color: Colors.black),
+        backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -91,7 +91,7 @@ class SignupPage extends StatelessWidget {
                       color: Colors.black),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 30,
                 child: TextButton(
                   onPressed: () {},
@@ -105,7 +105,7 @@ class SignupPage extends StatelessWidget {
                   style: TextStyle(color: Colors.pink),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               )
             ],

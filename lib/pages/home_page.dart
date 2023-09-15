@@ -1,7 +1,10 @@
+
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:layouts_1/pages/product_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -32,9 +35,9 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Container(
+              SizedBox(
                 height: 90,
-                child: CategoryList(),
+                child: categoryList(),
               ),
               const SizedBox(
                 height: 30,
@@ -50,11 +53,11 @@ class HomePage extends StatelessWidget {
                     style:
                         ElevatedButton.styleFrom(backgroundColor: Colors.black),
                     onPressed: () {},
-                    child: Text("See All"),
+                    child: const Text("See All"),
                   ),
                 ],
               ),
-              Container(height: 450, child: productList())
+              SizedBox(height: 350, child: productList(context))
             ],
           ),
         ),
@@ -81,48 +84,47 @@ Widget search() {
         ),
         Padding(
           padding: const EdgeInsets.only(left: 6, bottom: 6),
-          child: Container(
-              width: 200,
-              child: TextFormField(
-                decoration: const InputDecoration(
-                    labelText: "Search...",
-                    border: InputBorder.none,
-                    labelStyle: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400)),
-              )),
+          child: SizedBox(
+            width: 200,
+            child: TextFormField(
+              decoration: const InputDecoration(
+                  labelText: "Search...",
+                  border: InputBorder.none,
+                  labelStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400)),
+            ),
+          ),
         )
       ],
     ),
   );
 }
 
-Widget CategoryList() {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem(),
-        CategoryItem()
-      ],
-    ),
+Widget categoryList() {
+  return ListView(
+    scrollDirection: Axis.horizontal,
+    children: [
+      categoryItem(),
+      categoryItem(),
+      categoryItem(),
+      categoryItem(),
+      categoryItem(),
+      categoryItem(),
+      categoryItem(),
+      categoryItem(),
+      categoryItem()
+    ],
   );
 }
 
-Widget CategoryItem() {
+Widget categoryItem() {
   return Container(
     width: 70,
     height: 70,
-    padding: EdgeInsets.all(10),
-    margin: EdgeInsets.all(10),
+    padding: const EdgeInsets.all(10),
+    margin: const EdgeInsets.all(10),
     decoration: const BoxDecoration(
       color: Colors.white,
       boxShadow: [
@@ -136,28 +138,73 @@ Widget CategoryItem() {
         Radius.circular(64),
       ),
     ),
-    child: const Icon(Icons.insert_emoticon),
+    child: const Icon(Icons.category),
   );
 }
 
-Widget productList() {
+Widget productList(BuildContext context) {
   return Container(
-    color: Color.fromARGB(255, 242, 241, 239),
+    color: const Color.fromARGB(255, 242, 241, 239),
     child: ListView(
       scrollDirection: Axis.horizontal,
-      children: [productCard(), productCard(), productCard()],
+      children: [
+        productCard(context),
+        productCard(context),
+        productCard(context),
+      ],
     ),
   );
 }
 
-Widget productCard() {
+Widget productCard(BuildContext context) {
   return Container(
-    padding: EdgeInsets.all(10),
-    margin: EdgeInsets.all(5),
-    width: 170,
-    color: Colors.black12,
-    child: Center(
-      child: Icon(Icons.sell, size: 100,),
-    ),
-  );
+      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(5),
+      width: 170,
+      color: Colors.black12,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProductPage()));
+            },
+            child: const Center(
+              child: Icon(
+                Icons.sell,
+                size: 100,
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.topLeft,
+            child: const Text(
+              "Nome do Produto",
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+            ),
+          ),
+          Column(
+            children: [
+              Container(
+                alignment: Alignment.topLeft,
+                child: const Text(
+                  "Marca",
+                  style: TextStyle(fontWeight: FontWeight.w400),
+                ),
+              ),
+              Container(
+                alignment: Alignment.topLeft,
+                child: const Text(
+                  "\$ 00,00",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 33, 217, 39),
+                      fontWeight: FontWeight.w700),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ));
 }
